@@ -77,6 +77,23 @@ p { margin: 0 0 1em; }
 .knopka.beliy { background: #fff; color: var(--tekst); border-color: #fff; }
 .knopka.beliy:hover { background: var(--zelen); border-color: var(--zelen); color: #fff; }
 .knopka--bolshaya { padding: 17px 40px; font-size: 17px; }
+
+/* ---------- Плавающие кнопки «позвонить» и MAX ---------- */
+.plav {
+  position: fixed; right: 18px; bottom: 18px; z-index: 50;
+  display: flex; flex-direction: column; align-items: flex-end; gap: 12px;
+}
+.plav__knopka {
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+  min-width: 58px; height: 58px; padding: 0 16px; border-radius: 999px;
+  background: var(--zelen); color: #fff; text-decoration: none;
+  font-weight: 800; font-size: 15px; box-shadow: var(--teni);
+  transition: transform .18s, background .18s;
+}
+.plav__knopka:hover { background: var(--zelen-tyom); transform: scale(1.06); }
+.plav__knopka--max { background: #4F46E5; }
+.plav__knopka--max:hover { background: #4338CA; }
+.plav__znachok { width: 26px; height: 26px; stroke-width: 2; }
 .knopka--v-korzinu { width: 100%; margin-top: 16px; padding: 11px 20px; font-size: 15px; }
 .knopka--dobavleno { background: var(--tekst); border-color: var(--tekst); }
 
